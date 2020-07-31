@@ -7,7 +7,7 @@ s3_url = os.environ['S3_URL']
 s3_access_key = os.environ['S3_ACCESS_KEY']
 s3_secret_key = os.environ['S3_SECRET_KEY']
 s3_bucket = os.environ['S3_BUCKET']
-s3_backups_to_keep = os.environget('S3_BACKUP_TO_KEEP', 3)
+s3_backups_to_keep = int(os.environ.get('S3_BACKUP_TO_KEEP', '3'))
 
 
 def list_directories(bucket):
